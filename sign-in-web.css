@@ -1,0 +1,315 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Poppins;
+}
+.main {
+    width: 100%;
+    background-color: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%,);
+    background-image: url(https://i.pinimg.com/originals/a3/a4/b0/a3a4b0ea3d3ab5ac0a0d1a5ab875f51d.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+.header {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.logo {
+    position: absolute;
+    left: 20px;
+    top: 8%;
+}
+.buttons {
+    position: absolute;
+    width: 800px;
+    right: 33%;
+}
+.buttons ul {
+    list-style: none;
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.buttons ul li a{
+    text-decoration: none;
+    color: rgb(249, 249, 255);
+    font: 600;
+    font-size: 30px;
+    position: relative;
+}
+.buttons ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    background-color: #1166dc;
+    width: 0%;
+    height: 4px;
+    left: 0;
+    transition: 0.5s ease-in-out;
+}
+.buttons ul li a:hover::after {
+    width: 100%;
+}
+.website-accounts {
+    position: relative;
+    width: 400px;
+    right: 70px;
+}
+.website-accounts ul {
+    list-style: none;
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.website-accounts ul li a img {
+    width: 40px;
+    filter: invert(1);
+    transform: scale(1);
+    transition: 0.5s;
+}
+.website-accounts ul li a img:hover {
+    transform: scale(1.2);
+}
+.main-part {
+    width: 100%;
+    position: relative;
+    margin-top: 100px;
+    height: 702px;
+}
+.left-main-part {
+    width: 30%;
+    height: 702px;
+    position: relative;
+}
+.left-main-part h1 {
+    position: absolute;
+    top: 20px;
+    left: 60px;
+    color: white;
+    font-size: 40px;
+    font-weight: 600;
+}
+.left-main-part h1 span {
+    font-size: 40px;
+    color: #1166dc;
+    font-weight: 600;
+}
+.left-main-part p {
+    position: absolute;
+    top: 160px;
+    left: 60px;
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+}
+.left-main-part p span {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 400;
+}
+.button-link button {
+    padding: 8px 25px;
+    background-color: #1166dc;
+    color: white;
+    font-weight: 600;
+    font-size: 27px;
+    border: none;
+    border-radius: 40px;
+    letter-spacing: 1px;
+    position: absolute;
+    left: 60px;
+    bottom: 270px;
+    cursor: pointer;
+    box-shadow: 0 0 25px #1166dc;
+}
+.right-main-part {
+    width: 480px;
+    height: 520px;
+    position: absolute;
+    top: 10px;
+    right: 400px;
+}
+.box {
+    position: relative;
+    width: 400px;
+    height: 420px;
+    background-color: #1c1c1c;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.box::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left:-50%;
+    width: 400px;
+    height: 420px;
+    background: linear-gradient(0deg,transparent,
+    transparent, #45f3ff, #45f3ff, #45f3ff
+    );
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+}
+.box::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left:-50%;
+    width: 400px;
+    height: 420px;
+    background: linear-gradient(0deg,transparent,
+    transparent, #45f3ff, #45f3ff, #45f3ff
+    );
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+}
+.borderline {
+    position: absolute;
+    top: 0;
+    inset: 0;
+}
+.borderline::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left:-50%;
+    width: 400px;
+    height: 420px;
+    background: linear-gradient(0deg,transparent,
+    transparent, #ff5145, #ff5145, #ff5145
+    );
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -1.5s;
+}
+.borderline::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left:-50%;
+    width: 400px;
+    height: 420px;
+    background: linear-gradient(0deg,transparent,
+    transparent, #ff5145, #ff5145, #ff5145
+    );
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -4.5s;
+}
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.box form {
+    position: absolute;
+    inset: 4px;
+    background: #222;
+    padding: 50px 40px;
+    border-radius: 8px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+}
+.box form h2 {
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.1em;
+}
+.box form .inputBox {
+    position: relative;
+    width: 300px;
+    margin-top: 35px;
+}
+.box form .inputBox input {
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px;
+    background: transparent;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    color: #23242a;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    z-index: 10;
+}
+.box form .inputBox span {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 20px 10px 10px;
+    pointer-events: none;
+    color: #8b8989;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+} 
+.box form .inputBox input:valid ~ span,
+.box form .inputBox input:focus ~ span {
+    color: #fff;
+    font-size: 0.75em;
+    transform: translateY(-34px);
+}
+.box form .inputBox i {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+    pointer-events: none;
+}
+.box form .inputBox input:valid ~ i,
+.box form .inputBoxinput:focus ~ i {
+    height: 44px;
+}
+.box form .links {
+    display: flex;
+    justify-content: space-between;
+}
+.box form .links a {
+    margin: 10px 0;
+    font-size: 0.75em;
+    color: #8b8989;
+    text-decoration: none;
+    transition: 0.5s;
+}
+.box form .links a:hover,
+.box form .links a:nth-child(2) {
+    color: #fff;
+}
+.box form input[type="submit"] {
+    border: none;
+    outline: none;
+    padding: 9px 25px;
+    background: #fff;
+    cursor: pointer;
+    font-size: 0.9em;
+    border-radius: 4px;
+    font-weight: 600;
+    width: 100px;
+    margin-top: 10px;
+}
+.box form input[type="submit"]:active {
+    opacity: 0.8;
+}
